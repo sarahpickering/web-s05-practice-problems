@@ -12,21 +12,38 @@
     PROBLEM 1: Capture the cyan button in a variable, and set on onclick handler on it that logs to the console the text "Hello, world!". Test it out clicking the button on the page.
     */
     //ENTER YOUR CODE HERE
+    let cyanBtn = document.querySelector('#btn1')
+      cyanBtn.onclick = function () {
+        console.log("Hello, world!")
+    }
 
     /*
     PROBLEM 2: Capture the yellow button in a variable, and set on "onclick" handler on it that logs to the console the text content of the button. Use your DOM skills here, don't just hard code the string in the code! Test it out clicking the button on the page.
     */
     //ENTER YOUR CODE HERE
+    let yellowBtn = document.querySelector('#btn2')
+      yellowBtn.onclick = function () {
+        console.log(yellowBtn.textContent)
+      }
 
     /*
     PROBLEM 3: Capture the grey button in a variable, and set an "onclick" handler on it that logs to the console the text "Ugh, you killed me!" and then unmounts the button from the DOM. Hint: DOM nodes have a remove method on them.
     */
     //ENTER YOUR CODE HERE
+    let greyBtn = document.querySelector('#btn3')
+    greyBtn.onclick = function () {
+      console.log("Ugh, you killed me!")
+      greyBtn.remove()
+    }
 
     /*
     PROBLEM 4: Capture the input in a variable. Set (A) an "onfocus" handler on it that logs "Input focused!" to the console, (B) an "oninput" handler on it that logs "Input changed!" and (C) an "onblur" handler on it that logs "Input blurred". Interact with the input on the page to test it out!
     */
     //ENTER YOUR CODE HERE
+    let input = document.querySelector('#input1')
+    input.onfocus = () => console.log('Input focused!')
+    input.oninput = () => console.log('Input changed!')
+    input.onblur = () => console.log('Input blurred!')
 
   </script>
 </body>
