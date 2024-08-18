@@ -23,9 +23,15 @@
     let elements = Array.from(document.getElementsByTagName('*'))
     elements.forEach(element => {
       element.addEventListener('click', event => {
-        // ENTER YOUR CODE HERE
-      })
+        const {className, nodeName} = event.currentTarget
+        console.log(`The ${className} element is a ${nodeName}`)
+        if (event.currentTarget === document.querySelector('section')) {
+          console.log('\tI love this section!')
+        }
+      }, { capture: true })
     })
+        
+
 
     /*
     PROBLEM 2:
