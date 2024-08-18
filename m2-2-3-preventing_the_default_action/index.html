@@ -9,24 +9,41 @@
     /*
     PROBLEM 1: How would you prevent the user from copying text from the document?
     */
-    //ENTER YOUR CODE HERE
+    const handleCopy = (event) => {
+      event.preventDefault();
+    };
+    document.addEventListener("copy", handleCopy)
+
     /*
     PROBLEM 2: How to go one step ahead and also prevent the user from cutting text?
     */
-    //ENTER YOUR CODE HERE
+    const handleCut = (event) => {
+      event.preventDefault();
+    };
+    document.addEventListener("cut", handleCut)
 
     /*
     PROBLEM 3: The link on the page redirects the user to bloomtech.com
     How would you change its behavior by adding a malicious code that sends the user to hacked.com ?
     */
 
-    //ENTER YOUR CODE HERE
+    const externalLink = (event) => {
+      event.preventDefault();
+      window.open("https://hacked.com", "_blank");
+    };
+    document.querySelector("a").addEventListener("click", externalLink);
 
     /*
     PROBLEM 4: How can you prevent the default behavior of a the page's link ONLY if it belongs to the class '.prevent' ?
     */
 
-    //ENTER YOUR CODE HERE
+    const externalLink2 = (event) => {
+      if (event.target.classList.contains{'prevent'})
+      event.preventDefault();
+      window.open("https://hacked.com", "_blank");
+    };
+    document.querySelector("a").removeEventListener("click", externalLink)
+    document.querySelector("a").addEventListener("click", externalLink2);
 
     /*
     PROBLEM 5 (DEBUGGING):  The code below is not preventing the default action for the button. Why? Can you fix it?
@@ -37,7 +54,6 @@
     const handler2 = (event) => {
       event.preventDefault();
     };
-    document.querySelector("button").addEventListener("click", handler1);
     document.querySelector("button").addEventListener("click", handler2);
   </script>
 </body>
