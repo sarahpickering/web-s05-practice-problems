@@ -22,6 +22,9 @@
     */
     button.addEventListener('click', e => console.log('you clicked the BUTTON!'))
     main.addEventListener('click', e => console.log('you clicked the MAIN!'))
+    body.addEventListener('click', e => console.log('you clicked the BODY!'))
+    html.addEventListener('click', e => console.log('you clicked the HTML!'))
+    
     // ENTER YOUR CODE HERE
 
     /*
@@ -30,7 +33,7 @@
     Open the Console and click on the button. Do you see the captured click event on the `window` object, firing first?
     */
     // ENTER YOUR CODE HERE
-
+    window.addEventListener('click', e => console.log('you clicked the WINDOW'), true)
   </script>
 
 
